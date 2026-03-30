@@ -12,7 +12,7 @@ const components = [
     position: 'Subwoofer Channel',
     specs: [
       { key: 'RMS Power', val: '600W @ 1Ω' },
-      { key: 'Current load', val: '~200W @ 4Ω' },
+      { key: 'Active load', val: '~350W @ 2Ω' },
       { key: 'Type', val: 'Class D Mono' },
     ],
     tier: 'flagship',
@@ -42,7 +42,7 @@ const components = [
     position: 'Trunk / Baúl',
     specs: [
       { key: 'RMS Power', val: '750W' },
-      { key: 'Impedance', val: 'DVC 4Ω → 2Ω' },
+      { key: 'Impedance', val: '2Ω (DVC parallel)' },
       { key: 'Magnet', val: '120 Oz Double' },
     ],
     tier: 'high',
@@ -263,9 +263,9 @@ export default function CarAudio() {
               className="px-4 py-3 text-[10px] leading-relaxed text-white/30"
               style={{ border: '0.5px solid rgba(255,255,255,0.06)', borderLeft: '2px solid rgba(200,160,60,0.4)' }}
             >
-              Sub cableado DVC 4Ω en paralelo → 2Ω.
+              Sub cableado DVC 4Ω en paralelo → 2Ω ✓
               <br />
-              HELIX entrega ~350–400W en esa carga.
+              HELIX entregando ~350W activos en esa carga.
             </div>
           </div>
         </Reveal>

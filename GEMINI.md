@@ -121,21 +121,23 @@ public/
 
 | Componente | Marca / Serie | Modelo | Rol |
 |-----------|--------------|--------|-----|
-| Amplificador Mono | HELIX M-Series (Digital) | M ONE — 600W RMS @ 1Ω | Músculo del bajo — alimenta el subwoofer con precisión alemana |
+| Amplificador Mono | HELIX M-Series (Digital) | M ONE — 600W RMS @ 1Ω | Músculo del bajo — ~350W activos @ 2Ω al Soundstream XP12 |
 | Amplificador 4 Canales | ALPINE S-Series | S2-A36F | Claridad central — voces y medios, sonido cálido y natural |
 | Parlantes Traseros | KICKER KS-Series | KSC650 — 6.5" | Fidelidad trasera — complementan la potencia del Alpine |
-| Subwoofer | SOUNDSTREAM XPRO | XP12 — 12" | Impacto — recibe los 600W del Helix para el "punch" en el baúl |
-| Parlantes Puertas | SONY XS-FB | 16cm 3 vías | Eslabón débil — buenas, pero el Alpine S les queda "grande" |
+| Subwoofer | SOUNDSTREAM XPRO | XP12 — 12" DVC 4Ω | 2Ω (DVC paralelo) — ~350W del HELIX, margen a 750W RMS |
+| Parlantes Puertas | SONY XS-FB | 16cm 3 vías | Eslabón débil — upgrade pendiente |
 
 **Jerarquía de calidad:** HELIX > ALPINE S > KICKER KS > SOUNDSTREAM XP > SONY XS-FB
 
 **Flujo de señal:**
 - Fuente → Alpine S2-A36F (4ch) → KSC650 traseros + Sony XS-FB puertas
-- Fuente → HELIX M ONE (mono) → Soundstream XP12 (subwoofer, baúl)
+- Fuente → HELIX M ONE (mono) → Soundstream XP12 (2Ω DVC paralelo, ~350W activos)
+
+**Cableado sub:** DVC 4Ω → ambas bobinas en paralelo → 2Ω ✓ (configuración óptima activa)
 
 **Notas:**
-- El sistema completa el "Dream Team" de audio con componentes de gama alta
-- Los Sony de puertas son el punto a mejorar en un upgrade futuro
+- Sistema en configuración óptima — sub a 2Ω, HELIX entregando ~350W activos
+- Los Sony de puertas son el único punto a mejorar en el próximo upgrade
 - Configuración orientada a High Fidelity (HiFi) con énfasis en bajos precisos
 
 ---

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Image from 'next/image'
+import AISummary from './AISummary'
 
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -181,6 +182,8 @@ export default function Hero() {
             <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1 day:text-black/40">Drive</div>
           </div>
         </div>
+
+        <AISummary section="hero" label="About this build" />
 
         <div className="hero-cta flex items-center gap-6">
           <button

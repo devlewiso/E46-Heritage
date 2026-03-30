@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import AISummary from './AISummary'
 
 type LogEntry = {
   date: string
@@ -150,9 +151,10 @@ export default function BuildLog() {
           </span>
         </h2>
         <div className="w-10 h-[0.5px] bg-[#c8a03c]/50 mt-6" />
+        <AISummary section="log" label="Build Summary" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 mt-14">
         <Timeline items={leftLog} />
         <Timeline items={rightLog} />
       </div>

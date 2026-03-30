@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import AISummary from './AISummary'
 
 const components = [
   {
@@ -217,7 +218,8 @@ export default function CarAudio() {
         {/* Signal chain */}
         <Reveal delay={220}>
           <div>
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mb-8">Signal Flow</p>
+            <AISummary section="audio" label="System Analysis" />
+        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mt-8 mb-8">Signal Flow</p>
 
             {/* Highs chain */}
             <p className="text-[9px] tracking-[0.18em] uppercase text-[#c8a03c]/50 mb-3">Mids & Highs</p>

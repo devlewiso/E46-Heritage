@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import AISummary from './AISummary'
 
 const engineSpecs = [
   { key: 'Configuration', val: 'I6 DOHC' },
@@ -105,7 +106,8 @@ export default function Engine() {
               inline six
             </span>
           </div>
-          <ul className="list-none">
+          <AISummary section="engine" label="Engine Analysis" />
+          <ul className="list-none mt-8">
             {engineSpecs.map((item, i) => (
               <li
                 key={i}

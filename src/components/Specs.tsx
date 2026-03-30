@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import AISummary from './AISummary'
 
 const specs = [
   { num: '192', unit: 'hp', name: 'Power',       desc: '@ 6,000 rpm' },
@@ -59,7 +60,9 @@ export default function Specs() {
         </h2>
       </Reveal>
       <Reveal delay={140}>
-        <div className="w-10 h-[0.5px] bg-[#c8a03c]/50 my-6 mb-14" />
+        <div className="w-10 h-[0.5px] bg-[#c8a03c]/50 my-6" />
+        <AISummary section="specs" />
+        <div className="mb-14" />
       </Reveal>
       <Reveal delay={200}>
         <div

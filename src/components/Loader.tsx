@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0)
   const [gone, setGone] = useState(false)
+  const onCompleteRef = useRef(onComplete)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,7 +15,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           clearInterval(interval)
           setTimeout(() => {
             setGone(true)
-            onComplete()
+            onCompleteRef.current()
           }, 300)
           return 100
         }
@@ -22,7 +23,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       })
     }, 120)
     return () => clearInterval(interval)
-  }, [onComplete])
+  }, [])
 
   return (
     <div

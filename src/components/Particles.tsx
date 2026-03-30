@@ -2,8 +2,15 @@
 
 import { useEffect, useState } from 'react'
 
+interface Particle {
+  size: number
+  left: number
+  duration: number
+  delay: number
+}
+
 export default function Particles() {
-  const [particles, setParticles] = useState<any[]>([])
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     const newParticles = Array.from({ length: 18 }).map(() => ({

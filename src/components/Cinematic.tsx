@@ -36,8 +36,8 @@ export default function Cinematic() {
 
       <div className={`cine-content relative z-[4] text-center px-12 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="cine-quote text-[clamp(18px,3vw,28px)] font-black text-white tracking-tight leading-[1.2] uppercase mb-5">
-          "Not just a car.<br />
-          <span className="text-[#c8a03c]/90">A statement."</span>
+          &ldquo;Not just a car.<br />
+          <span className="text-[#c8a03c]/90">A statement.&rdquo;</span>
         </div>
         <div className="cine-sub text-[11px] text-white/25 tracking-[0.2em] uppercase">
           E46 · The last pure BMW · 2003

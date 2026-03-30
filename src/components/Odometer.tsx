@@ -1,16 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 interface CountProps {
   id: string
   from: number
   to: number
   duration: number
-  formatter: (v: number) => string | JSX.Element
+  formatter: (v: number) => ReactNode
 }
 
-function useCountUp({ id, from, to, duration, formatter }: CountProps, trigger: boolean) {
+function useCountUp({ from, to, duration, formatter }: CountProps, trigger: boolean) {
   const [value, setValue] = useState(formatter(from))
   const fired = useRef(false)
 

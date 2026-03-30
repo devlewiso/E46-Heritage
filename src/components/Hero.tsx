@@ -52,7 +52,8 @@ export default function Hero() {
   }, [])
 
   const revEngine = () => {
-    const AudioCtx = (window as any).AudioContext || (window as any).webkitAudioContext
+    const win = window as unknown as { AudioContext?: typeof AudioContext; webkitAudioContext?: typeof AudioContext }
+    const AudioCtx = win.AudioContext || win.webkitAudioContext
     if (!AudioCtx) return
     const ctx = new AudioCtx()
     const makeNote = (freq: number, dur: number, detune: number) => {

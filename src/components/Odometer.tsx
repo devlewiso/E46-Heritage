@@ -108,46 +108,46 @@ export default function Odometer() {
     <section
       ref={sectionRef}
       id="odo"
-      className="odo-section bg-[#050505] border-t border-b border-white/5 py-20 px-12 transition-colors duration-500 day:bg-[#e8e4de]"
+      className="odo-section bg-[#050505] border-t border-b border-white/5 py-20 px-12 transition-colors duration-500"
     >
       <div className={`section-label text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         Numbers
       </div>
-      <div className={`section-title text-[clamp(32px,5vw,52px)] font-black leading-[0.95] tracking-tight uppercase text-white mb-2 day:text-[#111] transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+      <div className={`section-title text-[clamp(32px,5vw,52px)] font-black leading-[0.95] tracking-tight uppercase text-white mb-2 transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         The <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,.25)' }}>Stats</span>
       </div>
       <div className={`w-10 h-[0.5px] bg-[#c8a03c]/50 my-6 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} />
       
       <div className={`odo-grid grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 mt-12 transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <div className="odo-card bg-[#050505] p-10 text-center day:bg-[#f0ede8]">
-          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight day:text-[#111]">
+        <div className="odo-card bg-[#050505] p-10 text-center">
+          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo1}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2 day:text-black/40">
+          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
             Kilometers
           </div>
         </div>
-        <div className="odo-card bg-[#050505] p-10 text-center day:bg-[#f0ede8]">
-          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight day:text-[#111]">
+        <div className="odo-card bg-[#050505] p-10 text-center">
+          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo2}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2 day:text-black/40">
+          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
             Horsepower
           </div>
         </div>
-        <div className="odo-card bg-[#050505] p-10 text-center day:bg-[#f0ede8]">
-          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight day:text-[#111]">
+        <div className="odo-card bg-[#050505] p-10 text-center">
+          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo3}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2 day:text-black/40">
+          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
             Days Owned
           </div>
         </div>
-        <div className="odo-card bg-[#050505] p-10 text-center day:bg-[#f0ede8]">
-          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight day:text-[#111]">
+        <div className="odo-card bg-[#050505] p-10 text-center">
+          <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo4}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2 day:text-black/40">
+          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
             Modifications
           </div>
         </div>

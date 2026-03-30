@@ -88,7 +88,7 @@ export default function Hero() {
   }
 
   return (
-    <section ref={heroRef} className="hero relative min-h-screen overflow-hidden bg-[#080808] p-12 flex flex-col justify-end transition-colors duration-500 day:bg-[#e8e4de]">
+    <section ref={heroRef} className="hero relative min-h-screen overflow-hidden bg-[#080808] p-12 flex flex-col justify-end transition-colors duration-500">
 
       {/* Scanlines */}
       <div
@@ -111,7 +111,7 @@ export default function Hero() {
       {/* Background "E46" */}
       <div
         ref={yearBgRef}
-        className="absolute right-10 top-[40%] -translate-y-1/2 text-[180px] md:text-[240px] font-black text-white/[0.022] tracking-tighter select-none z-[1] leading-none day:text-black/5"
+        className="absolute right-10 top-[40%] -translate-y-1/2 text-[180px] md:text-[240px] font-black text-white/[0.022] tracking-tighter select-none z-[1] leading-none"
       >
         E46
       </div>
@@ -131,7 +131,7 @@ export default function Hero() {
         ref={carWrapRef}
         className="absolute inset-0 w-full h-full flex items-end justify-end z-[2] pointer-events-none select-none overflow-hidden"
       >
-        <div className="relative w-full h-full img-glow day:opacity-85">
+        <div className="relative w-full h-full img-glow">
           <Image
             src="/img/e46-hero.webp"
             alt="BMW E46 325ci"
@@ -152,34 +152,34 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col text-[clamp(42px,7vw,62px)] font-black leading-[0.92] tracking-tighter uppercase">
-          <span className="hl1 text-white day:text-[#111]">The</span>
+          <span className="hl1 text-white">The</span>
           <span className="hl2 text-transparent day:text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.28)' }}>
             Bimmer
           </span>
-          <span className="hl3 text-white day:text-[#111]">Vibes</span>
+          <span className="hl3 text-white">Vibes</span>
           <style jsx>{`
-            body.day .hl2 { -webkit-text-stroke: 1px rgba(0,0,0,0.25); }
+            body.day .hl2 { -webkit-text-stroke: 1px rgba(232,224,208,0.22); }
           `}</style>
         </div>
 
-        <p className="hero-sub text-[11px] font-light text-white/35 tracking-[0.12em] uppercase my-2.5 mb-7 day:text-black/40">
+        <p className="hero-sub text-[11px] font-light text-white/35 tracking-[0.12em] uppercase my-2.5 mb-7">
           325ci · Coupé · Naturally Aspirated
         </p>
 
         <div className="hero-stats flex gap-7 mb-8">
           <div>
-            <div className="text-[22px] font-bold text-white leading-none day:text-[#111]">192</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1 day:text-black/40">HP</div>
+            <div className="text-[22px] font-bold text-white leading-none">192</div>
+            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">HP</div>
           </div>
-          <div className="w-[0.5px] bg-white/10 self-stretch day:bg-black/10" />
+          <div className="w-[0.5px] bg-white/10 self-stretch" />
           <div>
-            <div className="text-[22px] font-bold text-white leading-none day:text-[#111]">2.5L</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1 day:text-black/40">Engine</div>
+            <div className="text-[22px] font-bold text-white leading-none">2.5L</div>
+            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">Engine</div>
           </div>
-          <div className="w-[0.5px] bg-white/10 self-stretch day:bg-black/10" />
+          <div className="w-[0.5px] bg-white/10 self-stretch" />
           <div>
-            <div className="text-[22px] font-bold text-white leading-none day:text-[#111]">RWD</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1 day:text-black/40">Drive</div>
+            <div className="text-[22px] font-bold text-white leading-none">RWD</div>
+            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">Drive</div>
           </div>
         </div>
 
@@ -195,7 +195,7 @@ export default function Hero() {
           </button>
           <button
             onClick={() => scrollTo('specs')}
-            className="btn-ghost-line bg-transparent text-white/35 text-[10px] tracking-[0.15em] uppercase border-none cursor-none transition-colors duration-200 hover:text-white/70 day:text-black/40 day:hover:text-black/70"
+            className="btn-ghost-line bg-transparent text-white/35 text-[10px] tracking-[0.15em] uppercase border-none cursor-none transition-colors duration-200 hover:text-white/70"
           >
             Explore specs
           </button>
@@ -204,7 +204,7 @@ export default function Hero() {
 
       {/* Scroll hint */}
       <div className="absolute bottom-6 right-12 z-10 flex items-center gap-2.5">
-        <span className="text-[9px] tracking-[0.2em] uppercase text-white/[0.18] day:text-black/20">Scroll</span>
+        <span className="text-[9px] tracking-[0.2em] uppercase text-white/[0.18]">Scroll</span>
         <div
           className="w-1 h-1 rounded-full bg-[#c8a03c]/60"
           style={{ animation: 'blink 2s ease-in-out infinite' }}

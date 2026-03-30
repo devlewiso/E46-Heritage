@@ -30,8 +30,8 @@ export default function Nav() {
       >
         {isDay ? 'NIGHT MODE' : 'DAY MODE'}
       </button>
-      <nav className="sticky top-0 z-[100] flex justify-between items-center px-12 py-5 border-b border-white/[0.05] bg-[#080808]/95 backdrop-blur-[10px] transition-colors duration-500 day:bg-[#f0ede8]/92 day:border-black/[0.05]">
-        <div className="text-[11px] font-bold tracking-[0.25em] text-white/50 uppercase day:text-black/50">
+      <nav className="sticky top-0 z-[100] flex justify-between items-center px-12 py-5 border-b border-white/[0.05] bg-[#080808]/95 backdrop-blur-[10px] transition-colors duration-500">
+        <div className="text-[11px] font-bold tracking-[0.25em] text-white/50 uppercase">
           E46 Heritage
         </div>
         <ul className="flex gap-7 list-none">
@@ -39,7 +39,7 @@ export default function Nav() {
             <li
               key={id}
               onClick={() => scrollTo(id)}
-              className="text-[10px] tracking-[0.15em] text-white/[0.28] uppercase cursor-pointer transition-colors duration-300 hover:text-white/80 day:text-black/40 day:hover:text-black/80"
+              className="text-[10px] tracking-[0.15em] text-white/[0.28] uppercase cursor-pointer transition-colors duration-300 hover:text-white/80"
             >
               {label}
             </li>

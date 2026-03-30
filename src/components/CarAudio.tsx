@@ -17,6 +17,7 @@ const components = [
     ],
     tier: 'flagship',
     power: 100,
+    aiKey: 'audio-helix',
   },
   {
     brand: 'ALPINE',
@@ -31,6 +32,7 @@ const components = [
     ],
     tier: 'flagship',
     power: 88,
+    aiKey: 'audio-alpine',
   },
   {
     brand: 'SOUNDSTREAM',
@@ -45,6 +47,7 @@ const components = [
     ],
     tier: 'high',
     power: 80,
+    aiKey: 'audio-soundstream',
   },
   {
     brand: 'KICKER',
@@ -59,6 +62,7 @@ const components = [
     ],
     tier: 'high',
     power: 72,
+    aiKey: 'audio-kicker',
   },
   {
     brand: 'SONY',
@@ -73,6 +77,7 @@ const components = [
     ],
     tier: 'mid',
     power: 52,
+    aiKey: 'audio-sony',
   },
 ]
 
@@ -340,6 +345,8 @@ export default function CarAudio() {
                   </li>
                 ))}
               </ul>
+
+              <AISummary section={c.aiKey} compact label="Analysis" />
             </div>
           </Reveal>
         ))}

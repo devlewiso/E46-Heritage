@@ -503,6 +503,7 @@ body.day::after { opacity: 0.01; }
   border-left: 2px solid rgba(200,160,60,0.5);
   max-width: 640px;
 }
+.ai-panel--compact { padding: 14px 16px; max-width: none; }
 body.day .ai-panel { background: rgba(200,160,60,0.04); }
 .ai-cursor {
   display: inline-block; width: 2px; height: 13px;

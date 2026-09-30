@@ -6,6 +6,7 @@ const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
 const links = [
+  ['walkaround', '360°'],
   ['specs', 'Specs'],
   ['engine', 'Engine'],
   ['gallery', 'Gallery'],

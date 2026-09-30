@@ -41,7 +41,7 @@
 | @gsap/react | 2.1.2 | Integración React de GSAP |
 | Framer Motion | 12.38.0 | Animaciones de componentes |
 | Lenis | 1.0.42 | Smooth scrolling |
-| Three.js | 0.183.2 | 3D (instalado, pendiente de uso) |
+| Three.js + React Three Fiber + drei | 0.183.2 / 9 / 10 | Sección 360° Walk Around con el E46 en 3D |
 | Lucide React | 1.7.0 | Iconos |
 | clsx + tailwind-merge | — | Manejo de clases CSS |
 
@@ -69,6 +69,8 @@ src/
 │   ├── Odometer.tsx      # Contadores animados (km, hp, días, mods)
 │   ├── Cinematic.tsx     # Sección cita cinematográfica
 │   ├── StockVsModded.tsx # Comparación stock 2003 vs modded 2025
+│   ├── Walkaround.tsx    # Sección 360°: carga el visor 3D solo cerca de la pantalla
+│   ├── E46Scene.tsx      # Canvas de three.js: modelo, luces de estudio, sombra y OrbitControls
 │   ├── Specs.tsx         # Grid de specs de rendimiento (6 tarjetas)
 │   ├── Engine.tsx        # Showcase motor M54B25 con visualización rotante
 │   ├── Gallery.tsx       # Galería horizontal con 5 visualizaciones SVG del auto
@@ -109,6 +111,7 @@ public/
 4. **Odometer** — Contadores animados con números clave
 5. **Cinematic** — Cita: *"Not just a car. A statement."* con efecto film
 6. **StockVsModded** — Comparación visual stock vs modificado
+7. **Walkaround (360°)** — E46 en 3D que gira solo y se rota con mouse/dedo
 7. **Specs** — 6 tarjetas de rendimiento con animación hover
 8. **Engine** — Visualización motor con anillos giratorios
 9. **Gallery** — Galería horizontal con SVGs del auto (perfil, frontal, grilla, ruedas, trasera)
@@ -166,7 +169,6 @@ public/
 - Diseño responsive
 
 **Pendiente / Por implementar:**
-- Integración Three.js (librerías instaladas pero sin usar)
 - Imágenes reales en la galería (actualmente SVGs)
 - Media en Build Log
 - SEO optimizado
@@ -183,3 +185,16 @@ pnpm run dev      # Desarrollo con Turbopack en localhost:3000
 pnpm run build    # Build de producción
 pnpm run lint     # ESLint
 ```
+
+---
+
+## Modelo 3D (sección 360°)
+
+- `public/models/e46.glb` (1.6 MB): generado con **TRELLIS.2** (Microsoft, Space de Hugging Face, cuenta iranjd) a partir de `public/img/e46-hero.webp`, y comprimido con `gltf-transform optimize --compress meshopt --texture-compress webp --texture-size 1024 --simplify-ratio 0.5`.
+- Original sin comprimir (6.8 MB) en `assets-src/` (fuera de git).
+- `useGLTF(MODEL, false, true)` usa el decodificador meshopt incluido, sin CDN. Las luces de estudio son `Lightformer` (sin HDR externo).
+- Zoom desactivado para no secuestrar el scroll; sin auto-rotación con `prefers-reduced-motion`.
+
+## Respaldo de diseño
+
+Antes del pulido de sep 2026: rama `respaldo/antes-rediseno-2026-09-30` y tag `respaldo-antes-rediseno-2026-09-30`.

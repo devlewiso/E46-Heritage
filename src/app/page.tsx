@@ -12,6 +12,7 @@ import Footer from '@/components/Footer'
 import Odometer from '@/components/Odometer'
 import Cinematic from '@/components/Cinematic'
 import StockVsModded from '@/components/StockVsModded'
+import Walkaround from '@/components/Walkaround'
 import Cursor from '@/components/Cursor'
 import Loader from '@/components/Loader'
 import Particles from '@/components/Particles'
@@ -32,6 +33,7 @@ export default function Home() {
             <Odometer />
             <Cinematic />
             <StockVsModded />
+            <Walkaround />
             <Specs />
             <Engine />
             <Gallery />

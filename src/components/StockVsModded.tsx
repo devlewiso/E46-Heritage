@@ -36,7 +36,7 @@ export default function StockVsModded() {
   }, [])
 
   return (
-    <section id="comp" ref={sectionRef} className="comp-section p-12 py-[120px] transition-colors duration-500">
+    <section id="comp" ref={sectionRef} className="comp-section px-5 md:px-12 py-[120px] transition-colors duration-500">
       <div className={`section-label text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         Evolution
       </div>

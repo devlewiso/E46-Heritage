@@ -35,7 +35,7 @@ export default function Engine() {
   return (
     <section
       id="engine"
-      className="px-12 py-[120px] bg-[#050505]"
+      className="px-5 md:px-12 py-[120px] bg-[#050505]"
       style={{ borderTop: '0.5px solid rgba(255,255,255,0.05)', borderBottom: '0.5px solid rgba(255,255,255,0.05)' }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl">
@@ -114,7 +114,7 @@ export default function Engine() {
                 className="flex justify-between items-center py-3.5 text-[12px]"
                 style={{ borderBottom: i < engineSpecs.length - 1 ? '0.5px solid rgba(255,255,255,0.06)' : 'none' }}
               >
-                <span className="text-white/30 tracking-[0.1em] uppercase">{item.key}</span>
+                <span className="text-white/55 tracking-[0.1em] uppercase">{item.key}</span>
                 <span className="text-white font-bold tracking-[0.05em]">{item.val}</span>
               </li>
             ))}

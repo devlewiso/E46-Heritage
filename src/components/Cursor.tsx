@@ -6,10 +6,21 @@ export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
   const [hovered, setHovered] = useState(false)
+  // Solo con mouse o trackpad y sin "reducir movimiento": en táctil o para quien lo pide, cursor del sistema.
+  const [enabled, setEnabled] = useState(false)
   const mousePos = useRef({ x: 0, y: 0 })
   const ringPos = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
+    const ok = window.matchMedia('(pointer: fine)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    setEnabled(ok)
+    if (ok) document.documentElement.classList.add('has-custom-cursor')
+    return () => document.documentElement.classList.remove('has-custom-cursor')
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return
     const handleMouseMove = (e: MouseEvent) => {
       mousePos.current = { x: e.clientX, y: e.clientY }
       if (cursorRef.current) {
@@ -25,16 +36,16 @@ export default function Cursor() {
         ringRef.current.style.left = `${Math.round(ringPos.current.x)}px`
         ringRef.current.style.top = `${Math.round(ringPos.current.y)}px`
       }
-      requestAnimationFrame(animateRing)
+      requestID = requestAnimationFrame(animateRing)
     }
 
     const handleMouseEnter = () => setHovered(true)
     const handleMouseLeave = () => setHovered(false)
 
     window.addEventListener('mousemove', handleMouseMove)
-    const requestID = requestAnimationFrame(animateRing)
+    let requestID = requestAnimationFrame(animateRing)
 
-    const interactiveElements = document.querySelectorAll('button, li, a, .spec-card, .g-item')
+    const interactiveElements = document.querySelectorAll('button, a, .spec-card, .g-item')
     interactiveElements.forEach((el) => {
       el.addEventListener('mouseenter', handleMouseEnter)
       el.addEventListener('mouseleave', handleMouseLeave)
@@ -48,7 +59,9 @@ export default function Cursor() {
         el.removeEventListener('mouseleave', handleMouseLeave)
       })
     }
-  }, [])
+  }, [enabled])
+
+  if (!enabled) return null
 
   return (
     <>
@@ -60,14 +73,6 @@ export default function Cursor() {
         ref={ringRef}
         className={`fixed w-9 h-9 rounded-full border border-[#c8a03c]/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 transition-[width,height,opacity] duration-300 ${hovered ? 'w-[52px] h-[52px] opacity-60' : ''}`}
       />
-      <style jsx global>{`
-        html, body {
-          cursor: none !important;
-        }
-        button, a, li {
-          cursor: none !important;
-        }
-      `}</style>
     </>
   )
 }

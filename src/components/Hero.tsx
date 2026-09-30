@@ -162,24 +162,24 @@ export default function Hero() {
           `}</style>
         </div>
 
-        <p className="hero-sub text-[11px] font-light text-white/35 tracking-[0.12em] uppercase my-2.5 mb-7">
+        <p className="hero-sub text-[11px] font-light text-white/60 tracking-[0.12em] uppercase my-2.5 mb-7">
           325ci · Coupé · Naturally Aspirated
         </p>
 
         <div className="hero-stats flex gap-7 mb-8">
           <div>
             <div className="text-[22px] font-bold text-white leading-none">192</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">HP</div>
+            <div className="text-[10px] text-white/55 tracking-[0.15em] uppercase mt-1">HP</div>
           </div>
           <div className="w-[0.5px] bg-white/10 self-stretch" />
           <div>
             <div className="text-[22px] font-bold text-white leading-none">2.5L</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">Engine</div>
+            <div className="text-[10px] text-white/55 tracking-[0.15em] uppercase mt-1">Engine</div>
           </div>
           <div className="w-[0.5px] bg-white/10 self-stretch" />
           <div>
             <div className="text-[22px] font-bold text-white leading-none">RWD</div>
-            <div className="text-[10px] text-white/[0.28] tracking-[0.15em] uppercase mt-1">Drive</div>
+            <div className="text-[10px] text-white/55 tracking-[0.15em] uppercase mt-1">Drive</div>
           </div>
         </div>
 
@@ -189,13 +189,13 @@ export default function Hero() {
           <button
             id="revBtn"
             onClick={revEngine}
-            className="bg-[#c8a03c]/90 text-[#080808] text-[10px] font-bold tracking-[0.18em] uppercase px-7 py-3 rounded-sm border-none cursor-none transition-all duration-200 hover:bg-[#dbb84a] hover:-translate-y-px active:scale-[0.97]"
+            className="bg-[#c8a03c]/90 text-[#080808] text-[10px] font-bold tracking-[0.18em] uppercase px-7 py-3 rounded-sm border-none transition-all duration-200 hover:bg-[#dbb84a] hover:-translate-y-px active:scale-[0.97]"
           >
             Rev Engine
           </button>
           <button
             onClick={() => scrollTo('specs')}
-            className="btn-ghost-line bg-transparent text-white/35 text-[10px] tracking-[0.15em] uppercase border-none cursor-none transition-colors duration-200 hover:text-white/70"
+            className="btn-ghost-line bg-transparent text-white/60 text-[10px] tracking-[0.15em] uppercase border-none transition-colors duration-200 hover:text-white/70"
           >
             Explore specs
           </button>
@@ -204,7 +204,7 @@ export default function Hero() {
 
       {/* Scroll hint */}
       <div className="absolute bottom-6 right-12 z-10 flex items-center gap-2.5">
-        <span className="text-[9px] tracking-[0.2em] uppercase text-white/[0.18]">Scroll</span>
+        <span className="text-[10px] tracking-[0.2em] uppercase text-white/[0.18]">Scroll</span>
         <div
           className="w-1 h-1 rounded-full bg-[#c8a03c]/60"
           style={{ animation: 'blink 2s ease-in-out infinite' }}

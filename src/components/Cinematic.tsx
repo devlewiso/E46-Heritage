@@ -20,7 +20,7 @@ export default function Cinematic() {
   }, [])
 
   return (
-    <section className="cinematic bg-black min-h-[320px] flex items-center justify-center relative overflow-hidden border-t border-b border-white/[0.04]">
+    <section ref={sectionRef} className="cinematic bg-black min-h-[320px] flex items-center justify-center relative overflow-hidden border-t border-b border-white/[0.04]">
       <div className="cine-bars-top absolute top-0 left-0 right-0 h-14 bg-black z-[3]" />
       
       {[0, 2, 4].map((delay) => (
@@ -34,12 +34,12 @@ export default function Cinematic() {
         />
       ))}
 
-      <div className={`cine-content relative z-[4] text-center px-12 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+      <div className={`cine-content relative z-[4] text-center px-5 md:px-12 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="cine-quote text-[clamp(18px,3vw,28px)] font-black text-white tracking-tight leading-[1.2] uppercase mb-5">
           &ldquo;Not just a car.<br />
           <span className="text-[#c8a03c]/90">A statement.&rdquo;</span>
         </div>
-        <div className="cine-sub text-[11px] text-white/25 tracking-[0.2em] uppercase">
+        <div className="cine-sub text-[11px] text-white/50 tracking-[0.2em] uppercase">
           E46 · The last pure BMW · 2003
         </div>
       </div>

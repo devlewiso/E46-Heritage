@@ -27,7 +27,7 @@ export default function Home() {
           <Cursor />
           <Particles />
           <Nav />
-          <main className="bg-[#080808] transition-colors duration-500 day:bg-[#f0ede8]">
+          <main className="bg-[#080808] transition-colors duration-500 day:bg-[#141210]">
             <Hero />
             <Odometer />
             <Cinematic />

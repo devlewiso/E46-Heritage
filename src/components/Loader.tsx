@@ -36,7 +36,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
             <span className="bmw-text text-[11px] font-black tracking-[0.2em] text-[#c8a03c]/80">BMW</span>
           </div>
         </div>
-        <div className="loader-name text-[10px] font-bold tracking-[0.3em] text-white/30 uppercase mt-3">
+        <div className="loader-name text-[10px] font-bold tracking-[0.3em] text-white/55 uppercase mt-3">
           E46 Heritage
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           style={{ width: `${progress}%` }}
         />
       </div>
-      <div className="loader-pct text-[10px] text-white/20 tracking-[0.15em] mt-3">
+      <div className="loader-pct text-[10px] text-white/45 tracking-[0.15em] mt-3">
         {Math.round(progress)}%
       </div>
       <style jsx>{`

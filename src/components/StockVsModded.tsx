@@ -48,13 +48,13 @@ export default function StockVsModded() {
       <div className={`comp-grid grid grid-cols-1 md:grid-cols-2 gap-[2px] mt-12 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         {/* Stock Column */}
         <div className="comp-col bg-[#0a0a0a] p-8 md:p-10 transition-colors duration-500">
-          <span className="comp-tag inline-block text-[9px] font-bold tracking-[0.2em] uppercase mb-6 px-3 py-1 border border-white/10 text-white/30 rounded-sm">
+          <span className="comp-tag inline-block text-[10px] font-bold tracking-[0.2em] uppercase mb-6 px-3 py-1 border border-white/10 text-white/55 rounded-sm">
             Stock 2003
           </span>
           {stockItems.map((item, i) => (
             <div key={i} className="comp-item py-3.5 border-b border-white/5 last:border-none">
               <div className="comp-row flex justify-between items-center text-xs">
-                <span className="comp-key text-[10px] text-white/30 tracking-wider uppercase">
+                <span className="comp-key text-[10px] text-white/55 tracking-wider uppercase">
                   {item.key}
                 </span>
                 <span className="comp-val font-bold text-white">
@@ -73,13 +73,13 @@ export default function StockVsModded() {
 
         {/* Modded Column */}
         <div className="comp-col modded bg-[#0d0b08] p-8 md:p-10 transition-colors duration-500">
-          <span className="comp-tag inline-block text-[9px] font-bold tracking-[0.2em] uppercase mb-6 px-3 py-1 border border-[#c8a03c]/30 text-[#c8a03c]/90 rounded-sm day:border-[#966414]/30 day:text-[#966414]">
+          <span className="comp-tag inline-block text-[10px] font-bold tracking-[0.2em] uppercase mb-6 px-3 py-1 border border-[#c8a03c]/30 text-[#c8a03c]/90 rounded-sm day:border-[#966414]/30 day:text-[#966414]">
             Modded 2025
           </span>
           {moddedItems.map((item, i) => (
             <div key={i} className="comp-item py-3.5 border-b border-white/5 last:border-none">
               <div className="comp-row flex justify-between items-center text-xs">
-                <span className="comp-key text-[10px] text-white/30 tracking-wider uppercase">
+                <span className="comp-key text-[10px] text-white/55 tracking-wider uppercase">
                   {item.key}
                 </span>
                 <span className="comp-val font-bold text-[#c8a03c]/90">

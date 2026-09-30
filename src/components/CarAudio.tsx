@@ -150,7 +150,7 @@ export default function CarAudio() {
   return (
     <section
       id="audio"
-      className="px-12 py-[120px] bg-[#050505] relative overflow-hidden"
+      className="px-5 md:px-12 py-[120px] bg-[#050505] relative overflow-hidden"
       style={{ borderTop: '0.5px solid rgba(255,255,255,0.05)', borderBottom: '0.5px solid rgba(255,255,255,0.05)' }}
     >
       {/* Header */}
@@ -214,8 +214,8 @@ export default function CarAudio() {
               className="relative z-10 w-20 h-20 rounded-full bg-[#050505] flex flex-col items-center justify-center gap-0.5"
               style={{ border: '0.5px solid rgba(200,160,60,0.4)' }}
             >
-              <span className="text-[9px] font-bold tracking-[0.14em] text-[#c8a03c]/80 uppercase">HiFi</span>
-              <span className="text-[8px] text-white/20 tracking-widest uppercase">Build</span>
+              <span className="text-[10px] font-bold tracking-[0.14em] text-[#c8a03c]/80 uppercase">HiFi</span>
+              <span className="text-[10px] text-white/45 tracking-widest uppercase">Build</span>
             </div>
           </div>
         </Reveal>
@@ -224,16 +224,16 @@ export default function CarAudio() {
         <Reveal delay={220}>
           <div>
             <AISummary section="audio" label="System Analysis" />
-        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 mt-8 mb-8">Signal Flow</p>
+        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/45 mt-8 mb-8">Signal Flow</p>
 
             {/* Highs chain */}
-            <p className="text-[9px] tracking-[0.18em] uppercase text-[#c8a03c]/50 mb-3">Mids & Highs</p>
+            <p className="text-[10px] tracking-[0.18em] uppercase text-[#c8a03c]/50 mb-3">Mids & Highs</p>
             <div className="flex items-center gap-0 mb-8 flex-wrap">
               {chain.map((node, i) => (
                 <div key={i} className="flex items-center">
                   <div className="flex flex-col">
                     <span className="text-[11px] font-bold text-white/85 leading-tight whitespace-nowrap">{node.label}</span>
-                    <span className="text-[9px] text-white/25 tracking-[0.1em] uppercase">{node.sub}</span>
+                    <span className="text-[10px] text-white/50 tracking-[0.1em] uppercase">{node.sub}</span>
                   </div>
                   {i < chain.length - 1 && (
                     <span className="mx-2 text-[#c8a03c]/30 text-[10px] font-light select-none">→</span>
@@ -243,13 +243,13 @@ export default function CarAudio() {
             </div>
 
             {/* Sub chain */}
-            <p className="text-[9px] tracking-[0.18em] uppercase text-[#c8a03c]/50 mb-3">Bass Channel</p>
+            <p className="text-[10px] tracking-[0.18em] uppercase text-[#c8a03c]/50 mb-3">Bass Channel</p>
             <div className="flex items-center gap-0 mb-10 flex-wrap">
               {chainSub.map((node, i) => (
                 <div key={i} className="flex items-center">
                   <div className="flex flex-col">
                     <span className="text-[11px] font-bold text-white/85 leading-tight whitespace-nowrap">{node.label}</span>
-                    <span className="text-[9px] text-white/25 tracking-[0.1em] uppercase">{node.sub}</span>
+                    <span className="text-[10px] text-white/50 tracking-[0.1em] uppercase">{node.sub}</span>
                   </div>
                   {i < chainSub.length - 1 && (
                     <span className="mx-2 text-[#c8a03c]/30 text-[10px] font-light select-none">→</span>
@@ -260,7 +260,7 @@ export default function CarAudio() {
 
             {/* Wiring note */}
             <div
-              className="px-4 py-3 text-[10px] leading-relaxed text-white/30"
+              className="px-4 py-3 text-[10px] leading-relaxed text-white/55"
               style={{ border: '0.5px solid rgba(255,255,255,0.06)', borderLeft: '2px solid rgba(200,160,60,0.4)' }}
             >
               Sub cableado DVC 4Ω en paralelo → 2Ω ✓
@@ -289,15 +289,15 @@ export default function CarAudio() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <span
-                    className="text-[9px] font-black tracking-[0.22em] uppercase"
+                    className="text-[10px] font-black tracking-[0.22em] uppercase"
                     style={{ color: tierColor[c.tier] }}
                   >
                     {c.brand}
                   </span>
-                  <p className="text-[8px] text-white/20 tracking-[0.1em] uppercase mt-0.5">{c.series}</p>
+                  <p className="text-[10px] text-white/45 tracking-[0.1em] uppercase mt-0.5">{c.series}</p>
                 </div>
                 <span
-                  className="text-[8px] font-bold tracking-[0.12em] uppercase px-2 py-0.5"
+                  className="text-[10px] font-bold tracking-[0.12em] uppercase px-2 py-0.5"
                   style={{
                     border: `0.5px solid ${tierColor[c.tier]}`,
                     color: tierColor[c.tier],
@@ -312,14 +312,14 @@ export default function CarAudio() {
               <div className="text-[28px] font-black text-white leading-none tracking-tight mb-1">
                 {c.model}
               </div>
-              <div className="text-[10px] text-white/30 tracking-[0.12em] uppercase mb-1">{c.role}</div>
+              <div className="text-[10px] text-white/55 tracking-[0.12em] uppercase mb-1">{c.role}</div>
               <div className="text-[10px] text-[#c8a03c]/50 tracking-[0.08em] mb-5">{c.position}</div>
 
               {/* Power bar */}
               <div className="mb-5">
                 <div className="flex justify-between mb-1.5">
-                  <span className="text-[9px] text-white/20 tracking-widest uppercase">Grade</span>
-                  <span className="text-[9px] font-bold" style={{ color: tierColor[c.tier] }}>{c.power}%</span>
+                  <span className="text-[10px] text-white/45 tracking-widest uppercase">Grade</span>
+                  <span className="text-[10px] font-bold" style={{ color: tierColor[c.tier] }}>{c.power}%</span>
                 </div>
                 <div className="h-[2px] bg-white/[0.06] rounded-full overflow-hidden">
                   <div
@@ -340,7 +340,7 @@ export default function CarAudio() {
                     className="flex justify-between items-center py-2.5 text-[11px]"
                     style={{ borderBottom: j < c.specs.length - 1 ? '0.5px solid rgba(255,255,255,0.05)' : 'none' }}
                   >
-                    <span className="text-white/25 tracking-[0.08em] uppercase text-[10px]">{s.key}</span>
+                    <span className="text-white/50 tracking-[0.08em] uppercase text-[10px]">{s.key}</span>
                     <span className="text-white font-bold tracking-[0.04em]">{s.val}</span>
                   </li>
                 ))}

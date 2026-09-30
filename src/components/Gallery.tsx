@@ -140,7 +140,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="pt-[120px] overflow-hidden">
-      <div className="px-12 pb-12">
+      <div className="px-5 md:px-12 pb-12">
         <div ref={titleRef} className="reveal">
           <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4">
             Visual

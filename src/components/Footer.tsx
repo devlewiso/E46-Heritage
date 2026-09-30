@@ -1,14 +1,14 @@
 export default function Footer() {
   return (
     <footer
-      className="px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-6"
+      className="px-5 md:px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-6"
       style={{ borderTop: '0.5px solid rgba(255,255,255,0.06)' }}
     >
-      <div className="text-[11px] font-bold tracking-[0.25em] text-white/28 uppercase">
+      <div className="text-[11px] font-bold tracking-[0.25em] text-white/55 uppercase">
         E46 Heritage
       </div>
       <div className="flex flex-col items-center gap-1">
-        <p className="text-[9px] tracking-[0.2em] uppercase text-white/15">Follow the build</p>
+        <p className="text-[10px] tracking-[0.2em] uppercase text-white/15">Follow the build</p>
         <a
           href="https://instagram.com/devlewiso"
           target="_blank"

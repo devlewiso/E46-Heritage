@@ -83,7 +83,7 @@ export default function AISummary({ section, label = 'AI Analysis', compact = fa
       {/* Trigger button */}
       <button
         onClick={handleOpen}
-        className="ai-trigger group flex items-center gap-2.5 cursor-none"
+        className="ai-trigger group flex items-center gap-2.5"
       >
         <span className="ai-dot" />
         <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#c8a03c]/60 group-hover:text-[#c8a03c]/90 transition-colors duration-200">
@@ -100,10 +100,10 @@ export default function AISummary({ section, label = 'AI Analysis', compact = fa
           {/* Header bar */}
           <div className="flex items-center gap-2 mb-3 pb-2.5" style={{ borderBottom: '0.5px solid rgba(200,160,60,0.12)' }}>
             <span className={`inline-block w-1.5 h-1.5 rounded-full bg-[#c8a03c] ${!done ? 'animate-pulse' : ''}`} />
-            <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-[#c8a03c]/50">
+            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#c8a03c]/50">
               {thinking ? 'Processing...' : done ? 'Analysis complete' : 'Generating...'}
             </span>
-            <span className="ml-auto text-[9px] text-white/10 tracking-widest">E46·AI</span>
+            <span className="ml-auto text-[10px] text-white/10 tracking-widest">E46·AI</span>
           </div>
 
           {/* Content */}

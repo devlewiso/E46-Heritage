@@ -88,7 +88,7 @@ function TimelineItem({ item, index }: { item: LogEntry; index: number }) {
       </div>
 
       <p
-        className="text-[9px] font-bold tracking-[0.2em] uppercase mb-2"
+        className="text-[10px] font-bold tracking-[0.2em] uppercase mb-2"
         style={{ color: item.active ? 'rgba(200,160,60,0.85)' : 'rgba(200,160,60,0.55)' }}
       >
         {item.date}
@@ -96,9 +96,9 @@ function TimelineItem({ item, index }: { item: LogEntry; index: number }) {
       <h4 className="text-[16px] font-bold text-white mb-1.5 tracking-tight leading-snug">
         {item.title}
       </h4>
-      <p className="text-[12px] text-white/30 leading-relaxed">{item.desc}</p>
+      <p className="text-[12px] text-white/55 leading-relaxed">{item.desc}</p>
       <span
-        className="inline-block text-[9px] tracking-[0.15em] uppercase px-2.5 py-1 mt-3 rounded-sm"
+        className="inline-block text-[10px] tracking-[0.15em] uppercase px-2.5 py-1 mt-3 rounded-sm"
         style={{
           border: `0.5px solid ${item.active ? 'rgba(200,160,60,0.35)' : 'rgba(255,255,255,0.1)'}`,
           color: item.active ? 'rgba(200,160,60,0.7)' : 'rgba(255,255,255,0.22)',
@@ -138,7 +138,7 @@ export default function BuildLog() {
   }, [])
 
   return (
-    <section id="log" className="px-12 py-[120px]">
+    <section id="log" className="px-5 md:px-12 py-[120px]">
       <div ref={titleRef} className="reveal mb-16">
         <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4">
           Historia

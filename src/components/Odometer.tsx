@@ -108,7 +108,7 @@ export default function Odometer() {
     <section
       ref={sectionRef}
       id="odo"
-      className="odo-section bg-[#050505] border-t border-b border-white/5 py-20 px-12 transition-colors duration-500"
+      className="odo-section bg-[#050505] border-t border-b border-white/5 py-20 px-5 md:px-12 transition-colors duration-500"
     >
       <div className={`section-label text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         Numbers
@@ -123,7 +123,7 @@ export default function Odometer() {
           <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo1}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
+          <div className="odo-label text-[10px] tracking-[0.2em] uppercase text-white/50 mt-2">
             Kilometers
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function Odometer() {
           <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo2}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
+          <div className="odo-label text-[10px] tracking-[0.2em] uppercase text-white/50 mt-2">
             Horsepower
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function Odometer() {
           <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo3}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
+          <div className="odo-label text-[10px] tracking-[0.2em] uppercase text-white/50 mt-2">
             Days Owned
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function Odometer() {
           <div className="odo-val text-[clamp(28px,4vw,48px)] font-black text-white tracking-tight">
             {odo4}
           </div>
-          <div className="odo-label text-[9px] tracking-[0.2em] uppercase text-white/25 mt-2">
+          <div className="odo-label text-[10px] tracking-[0.2em] uppercase text-white/50 mt-2">
             Modifications
           </div>
         </div>

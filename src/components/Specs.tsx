@@ -41,7 +41,7 @@ function Reveal({
 
 export default function Specs() {
   return (
-    <section id="specs" className="px-12 py-[120px] relative overflow-hidden">
+    <section id="specs" className="px-5 md:px-12 py-[120px] relative overflow-hidden">
       <Reveal>
         <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a03c]/70 mb-4">
           Performance
@@ -75,7 +75,7 @@ export default function Specs() {
                 {s.num}
                 <span className="text-[14px] font-light text-white/38 ml-1">{s.unit}</span>
               </div>
-              <div className="text-[10px] tracking-[0.18em] uppercase text-white/[0.28] mt-2">
+              <div className="text-[10px] tracking-[0.18em] uppercase text-white/55 mt-2">
                 {s.name}
               </div>
               <div className="text-[11px] text-white/[0.15] mt-1.5 leading-relaxed">

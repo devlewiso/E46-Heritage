@@ -112,11 +112,11 @@ public/
 5. **Cinematic** — Cita: *"Not just a car. A statement."* con efecto film
 6. **StockVsModded** — Comparación visual stock vs modificado
 7. **Walkaround (360°)** — E46 en 3D que gira solo y se rota con mouse/dedo
-7. **Specs** — 6 tarjetas de rendimiento con animación hover
-8. **Engine** — Visualización motor con anillos giratorios
-9. **Gallery** — Galería horizontal con SVGs del auto (perfil, frontal, grilla, ruedas, trasera)
-10. **BuildLog** — Timeline 2003–2025 con milestones del build
-11. **Footer** — Branding + Instagram
+8. **Specs** — 6 tarjetas de rendimiento con animación hover
+9. **Engine** — Visualización motor con anillos giratorios
+10. **Gallery** — Galería horizontal con SVGs del auto (perfil, frontal, grilla, ruedas, trasera)
+11. **BuildLog** — Timeline 2003–2025 con milestones del build
+12. **Footer** — Branding + Instagram
 
 ---
 

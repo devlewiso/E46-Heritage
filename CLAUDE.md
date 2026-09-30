@@ -45,7 +45,7 @@
 | Lucide React | 1.7.0 | Iconos |
 | clsx + tailwind-merge | — | Manejo de clases CSS |
 
-**Deploy:** pendiente (estructura Next.js lista para Netlify/Vercel)
+**Deploy:** Cloudflare Workers (assets estáticos) en https://e46.neuralcodelab.com — `npx wrangler deploy` (corre el build y sube `./out`)
 **Dev:** `pnpm run dev` con Turbopack
 
 ---
@@ -173,7 +173,7 @@ public/
 - Media en Build Log
 - SEO optimizado
 - Analytics
-- Deploy en producción
+
 
 ---
 

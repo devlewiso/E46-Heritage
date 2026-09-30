@@ -1,0 +1,15 @@
+// E46 Heritage: sitio Next.js exportado como estático y servido por Cloudflare Workers.
+// Deploy: npx wrangler deploy (corre el build antes de subir)
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "e46-heritage",
+  "compatibility_date": "2026-09-01",
+  "build": { "command": "npx -y pnpm@9 run build" },
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "e46.neuralcodelab.com", "custom_domain": true }
+  ]
+}

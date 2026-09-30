@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Exportación estática: Cloudflare Workers sirve ./out como assets (sin servidor).
+  output: "export",
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

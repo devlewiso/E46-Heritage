@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Originales pesados (el modelo optimizado está en public/models)
 assets-src/
+
+# Cloudflare
+.wrangler

@@ -528,6 +528,14 @@ body.day .ai-panel { background: rgba(200,160,60,0.04); }
 }
 
 
+/* ── HERO ────────────────────────────────────────── */
+/* Pantalla completa en monitores anchos. En ventanas angostas (media pantalla) la portada toma
+   la altura de la foto (16:9) para que el auto la llene sin dejar un hueco arriba ni recortarse. */
+.hero-alto { min-height: 100svh; }
+@media (min-width: 640px) {
+  .hero-alto { min-height: min(100svh, max(600px, 64vw)); }
+}
+
 /* ── RESPONSIVE (móvil) ──────────────────────────── */
 /* Las reglas de arriba fijan columnas y paddings de escritorio y pisan las clases de Tailwind. */
 @media (max-width: 767px) {

@@ -88,7 +88,7 @@ export default function Hero() {
   }
 
   return (
-    <section ref={heroRef} className="hero relative min-h-screen overflow-hidden bg-[#080808] p-12 flex flex-col justify-end transition-colors duration-500">
+    <section ref={heroRef} className="hero hero-alto relative overflow-hidden bg-[#080808] p-12 flex flex-col justify-end transition-colors duration-500">
 
       {/* Scanlines */}
       <div
@@ -131,16 +131,19 @@ export default function Hero() {
         ref={carWrapRef}
         className="absolute inset-0 w-full h-full flex items-end justify-end z-[2] pointer-events-none select-none overflow-hidden"
       >
-        <div className="relative w-full h-full img-glow">
+        <div className="relative w-full h-full img-glow [mask-image:linear-gradient(to_bottom,transparent_8%,black_22%,black_48%,transparent_62%)] sm:[mask-image:none]">
           <Image
             src="/img/e46-hero.webp"
             alt="BMW E46 325ci"
             fill
-            className="object-contain object-right-bottom scale-110 md:scale-125 translate-x-[5%] translate-y-[8%] lg:translate-x-[2%] lg:translate-y-[5%]"
+            className="object-contain object-[50%_28%] scale-[1.35] sm:object-cover sm:object-[62%_70%] sm:scale-110 md:scale-[1.15] sm:translate-y-[4%]"
             priority
           />
         </div>
       </div>
+
+      {/* Degradado detrás del texto: el título se lee aunque quede encima del auto en ventanas angostas */}
+      <div className="absolute inset-0 z-[3] pointer-events-none bg-gradient-to-t sm:bg-gradient-to-r from-[#080808]/90 sm:from-[#080808]/85 via-[#080808]/40 sm:via-[#080808]/35 to-transparent md:via-[#080808]/20 day:from-[#141210]/85" />
 
       {/* Hero content */}
       <div className="relative z-10 max-w-[420px]">
